@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+.splash-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  animation: fadeToBlue 0.1s ease-out forwards, showContent 1s ease-in-out 1.2s forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes fadeToBlue {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: #42A5F5; /* light blue */
+  }
+}
+
+.content {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out 1.3s forwards;
+  text-align: center;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: black; /* navy blue */
+}
+
+.slogan {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-top: 0.5rem;
+}

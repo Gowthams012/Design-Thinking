@@ -1,0 +1,65 @@
+/* Home.css */
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #ffffff;
+  padding: 2rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.home-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.home-title .blue {
+  color: #4BACDC;
+}
+
+.home-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.home-image {
+  width: 300px;
+  max-width: 80%;
+  margin-bottom: 2rem;
+}
+
+.home-quote {
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 1.5rem;
+}
+
+.blue-text {
+  color: #4BACDC;
+  font-weight: 500;
+}
+
+.home-button {
+  background-color: #4BACDC;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.home-button:hover {
+  background-color: #389AC2; /* Slightly darker shade for hover */
+  transform: translateY(-2px);
+}
