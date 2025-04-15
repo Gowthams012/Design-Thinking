@@ -1,10 +1,21 @@
 // src/components/SignIn.jsx
 import React from 'react';
 import './SignIn.css';
-import { FcGoogle } from 'react-icons/fc'; // Google icon from react-icons
-import { Link } from 'react-router-dom';
+import { FcGoogle } from 'react-icons/fc';
+import { Link, useNavigate } from 'react-router-dom'; // useNavigate imported
 
 const SignIn = () => {
+  const navigate = useNavigate(); // Initialize navigation
+
+  const handleSignIn = (e) => {
+    e.preventDefault();
+
+    // You can add validation/auth logic here (e.g. Firebase/Auth API call)
+
+    // On success, navigate to Profile page
+    navigate('/Profile');
+  };
+
   return (
     <div className="sign-in-container">
       <div className="sign-in-content">
@@ -13,7 +24,7 @@ const SignIn = () => {
         <div className="login-box">
           <h2>Log in to your account</h2>
           <p className="welcome-text">Welcome back! Please enter your details.</p>
-          <form>
+          <form onSubmit={handleSignIn}>
             <div className="form-group">
               <label htmlFor="email">Email</label>
               <input type="email" id="email" placeholder="Enter your email" />
@@ -30,7 +41,7 @@ const SignIn = () => {
             </div>
             <div className="button-group">
               <button type="submit" className="sign-in-button">Sign in</button>
-              <button className="google-sign-in">
+              <button className="google-sign-in" type="button">
                 <FcGoogle /> Continue with Google
               </button>
             </div>

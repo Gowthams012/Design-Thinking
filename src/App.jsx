@@ -4,6 +4,9 @@ import SplashScreen from './component/SplashScreen';
 import Home from './component/Home';
 import SignIn from './component/SignIn';
 import SignUp from './component/SignUp';
+import Profile from './component/profile';
+
+
 
 const SplashRoute = () => {
   const navigate = useNavigate();
@@ -27,6 +30,7 @@ const App = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
   );
